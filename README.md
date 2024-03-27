@@ -1,14 +1,11 @@
-# drag-and-drop
+# Drag and Drop
+I wanted to add drag and drop feature in my Todo App project without using a library. This was a fun challenge to do.
 
-This template should help get you started developing with Vue 3 in Vite.
+## What I Learned
+- I got familiar with HTML Drag and Drop API
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Continued Development
+- When some item is being dragged, I'd like to add a transition/animation for other items.
 
 ## Project Setup
 
