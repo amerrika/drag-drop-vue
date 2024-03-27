@@ -1,0 +1,49 @@
+:root {
+  --dark: #2c3e50;
+  --green: #42b883;
+  --yellow: #ffd319;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type:  none;
+}
+
+/* GENERAL */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  background: #292b36;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  place-items: center;
+}
+
+/* UTILITIES */
+
+.container {
+  width: min(900px, 100% - 10px);
+}
