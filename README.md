@@ -6,6 +6,7 @@ I wanted to add drag and drop feature to my Todo App without using a library. It
 
 ## Continued Development
 - When an item is being dragged, I'd like to add a transition/animation for other items.
+- Make it mobile/touch friendly
 
 ## Project Setup
 
