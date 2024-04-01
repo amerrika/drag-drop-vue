@@ -1,11 +1,11 @@
 # Drag and Drop
-I wanted to add drag and drop feature in my Todo App project without using a library. This was a fun challenge to do.
+I wanted to add drag and drop feature to my Todo App without using a library. It was challenging to sort items but it was a fun challenge to do.
 
 ## What I Learned
 - I got familiar with HTML Drag and Drop API
 
 ## Continued Development
-- When some item is being dragged, I'd like to add a transition/animation for other items.
+- When an item is being dragged, I'd like to add a transition/animation for other items.
 
 ## Project Setup
 
