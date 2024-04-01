@@ -41,9 +41,3 @@ body {
   display: flex;
   place-items: center;
 }
-
-/* UTILITIES */
-
-.container {
-  width: min(900px, 100% - 10px);
-}
