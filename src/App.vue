@@ -1,21 +1,24 @@
 <template>
-  <div class="container">
-    <h1>
-      Single List Drag & Drop with
-      <span style="color: var(--green)"
-        >Vue<span style="color: #35495e">.</span>js</span
-      >
-    </h1>
+  <div class="drag-drop">
+    <div class="drag-drop__header">
+      <h1>
+        Single List Drag & Drop with
+        <span style="color: var(--green)"
+          >Vue<span style="color: #35495e">.</span>js</span
+        >
+      </h1>
+    </div>
+
     <ul
       ref="ul"
-      class="drop-zone"
+      class="drag-drop__list"
       @drop.prevent="onDrop"
       @dragover.prevent="onDragover"
     >
       <li
         v-for="(item, index) in items"
         :key="index"
-        class="drag-el"
+        class="drag-drop__item"
         draggable="true"
         @dragstart="onDragstart($event, index)"
         @dragend="onDragend"
@@ -86,6 +89,7 @@ export default {
       const x = dragElIndex;
       const y = dropElIndex;
 
+      // a space between items
       let diff = x - y;
 
       if (y === null) return;
@@ -94,13 +98,15 @@ export default {
         // swap positions
         [list[y], list[x]] = [list[x], list[y]];
       } else {
-        // 1. swap drag and drop items
+        // 1. swap places of drag item and drop item
         list[y] = listUnmodified[x];
         // 2. sort other items
+        // if dragging item up
         if (diff > 1) {
           for (let i = 1; i <= diff; i++) {
             list[y + i] = listUnmodified[y + i - 1];
           }
+          // if dragging item down
         } else if (diff < -1) {
           for (let i = 0; i < Math.abs(diff); i++) {
             list[x + i] = listUnmodified[x + i + 1];
@@ -124,14 +130,20 @@ export default {
   justify-content: center;
 }
 
-.drop-zone {
+.drag-drop {
+  width: min(900px, 100% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.drag-drop__list {
   width: 100%;
-  margin: 50px auto;
   padding: 20px;
   min-height: 10px;
 }
 
-.drag-el {
+.drag-drop__item {
   user-select: none;
   background-color: var(--green);
   color: var(--dark);
@@ -142,7 +154,7 @@ export default {
   border: 1px solid var(--green);
 }
 
-.drag-el:last-of-type {
+.drag-drop__item:last-of-type {
   margin-bottom: 0;
 }
 
